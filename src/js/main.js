@@ -4,14 +4,115 @@ document.addEventListener("DOMContentLoaded", function () {
   const exercice3 = document.querySelector("#exercice-3");
 
   if (exercice1) {
-    // Ecrire ici tout le code pour l'exercice 1: Sélecteurs JavaScript
+    document.querySelector(".broccoli").addEventListener("click", function () {
+      document.querySelector(".broccoli").remove();
+    });
+
+    document
+      .querySelector(".healthy-food")
+      .addEventListener("click", function () {
+        document.querySelector(".healthy-food").remove();
+      });
+
+    // document.querySelector("[data-organic="true"]").addEventListener("click", function() {
+    //   document.querySelector("[data-organic="true"]").remove();
+    // })
+
+    document.querySelector(".steamed").addEventListener("click", function () {
+      document.querySelector(".steamed").remove();
+    });
+
+    document.querySelector(".raw-food").addEventListener("click", function () {
+      document.querySelector(".raw-food").remove();
+    });
   }
 
   if (exercice2) {
-    // Ecrire ici tout le code pour l'exercice 2: Modification des classes
+    document.querySelector(".raw").addEventListener("click", function () {
+      document.querySelector(".raw").classList.add("cooked");
+    });
+
+    document.querySelector(".hot").addEventListener("click", function () {
+      document.querySelector(".hot").classList.remove("burned");
+    });
+
+    document
+      .querySelector("#pizza-special")
+      .addEventListener("click", function () {
+        document
+          .querySelector("#pizza-special")
+          .classList.toggle("highlighted");
+      });
+
+    document.querySelector(".basic").addEventListener("click", function () {
+      document.querySelector(".basic").classList.add("premium", "deluxe");
+    });
+
+    document.querySelector(".cold").addEventListener("click", function () {
+      document.querySelector(".cold").classList.remove("cold");
+      document.querySelector(".cold").classList.add("hot");
+    });
+
+    document
+      .querySelector(".regular-size")
+      .addEventListener("click", function () {
+        document
+          .querySelector(".regular-size")
+          .classList.replace("regular-size", "large-size");
+      });
+
+    document
+      .querySelector(".unfinished")
+      .addEventListener("click", function () {
+        document.querySelector(".unfinished").classList.add("ready");
+        document
+          .querySelector(".unfinished")
+          .classList.remove("unfinished", "raw");
+      });
   }
 
   if (exercice3) {
-    // Ecrire ici tout le code pour l'exercice 3: Ecouteurs d'événement
+    document
+      .querySelector("#exercice-3-1")
+      .addEventListener("click", function () {
+        document.querySelector("#exercice-3-1").classList.add("highlight");
+      });
+
+    document
+      .querySelector("#exercice-3-2 button")
+      .addEventListener("click", function () {
+        document
+          .querySelector("#exercice-3-2 button")
+          .classList.toggle("highlight");
+      });
+
+    document
+      .querySelector("#exercice-3-3")
+      .addEventListener("mouseover", function () {
+        document.querySelector("#exercice-3-3").classList.add("highlight");
+      });
+    document
+      .querySelector("#exercice-3-3")
+      .addEventListener("mouseout", function () {
+        document.querySelector("#exercice-3-3").classList.remove("highlight");
+      });
+
+    document
+      .querySelector("#exercice-3-4")
+      .addEventListener("mousemove", function () {
+        document.querySelector("#exercice-3-4").classList.add("highlight");
+      });
+
+    document
+      .querySelector("#exercice-3-5")
+      .addEventListener("scroll", function () {
+        document.querySelector("#exercice-3-5").classList.add("highlight");
+      });
+
+    document
+      .querySelector("#exercice-3-6")
+      .addEventListener("keydown", function () {
+        document.querySelector("#exercice-3-6").classList.add("highlight");
+      });
   }
 });
