@@ -4,71 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const exercice3 = document.querySelector("#exercice-3");
 
   if (exercice1) {
-    document.querySelector(".broccoli").addEventListener("click", function () {
-      document.querySelector(".broccoli").remove();
-    });
-
-    document
-      .querySelector(".healthy-food")
-      .addEventListener("click", function () {
-        document.querySelector(".healthy-food").remove();
-      });
-
-    // document.querySelector("[data-organic="true"]").addEventListener("click", function() {
-    //   document.querySelector("[data-organic="true"]").remove();
-    // })
-
-    document.querySelector(".steamed").addEventListener("click", function () {
-      document.querySelector(".steamed").remove();
-    });
-
-    document.querySelector(".raw-food").addEventListener("click", function () {
-      document.querySelector(".raw-food").remove();
-    });
+    document.querySelector(".broccoli").remove();
+    document.querySelector(".broccoli").remove();
+    document.querySelector(".broccoli").remove();
+    document.querySelector(".broccoli").remove();
+    document.querySelector(".broccoli").remove();
   }
 
   if (exercice2) {
-    document.querySelector(".raw").addEventListener("click", function () {
-      document.querySelector(".raw").classList.add("cooked");
-    });
-
-    document.querySelector(".hot").addEventListener("click", function () {
-      document.querySelector(".hot").classList.remove("burned");
-    });
-
-    document
-      .querySelector("#pizza-special")
-      .addEventListener("click", function () {
-        document
-          .querySelector("#pizza-special")
-          .classList.toggle("highlighted");
-      });
-
-    document.querySelector(".basic").addEventListener("click", function () {
-      document.querySelector(".basic").classList.add("premium", "deluxe");
-    });
-
-    document.querySelector(".cold").addEventListener("click", function () {
-      document.querySelector(".cold").classList.remove("cold");
-      document.querySelector(".cold").classList.add("hot");
-    });
-
+    document.querySelector(".raw").classList.add("cooked");
+    document.querySelector(".hot").classList.remove("burned");
+    document.querySelector("#pizza-special").classList.toggle("highlighted");
+    document.querySelector(".basic").classList.add("premium", "deluxe");
+    document.querySelector(".cold").classList.add("hot");
+    document.querySelector(".cold").classList.remove("cold");
     document
       .querySelector(".regular-size")
-      .addEventListener("click", function () {
-        document
-          .querySelector(".regular-size")
-          .classList.replace("regular-size", "large-size");
-      });
-
-    document
-      .querySelector(".unfinished")
-      .addEventListener("click", function () {
-        document.querySelector(".unfinished").classList.add("ready");
-        document
-          .querySelector(".unfinished")
-          .classList.remove("unfinished", "raw");
-      });
+      .classList.replace("regular-size", "large-size");
+    document.querySelector(".unfinished").classList.add("ready");
+    document.querySelector(".unfinished").classList.remove("unfinished", "raw");
   }
 
   if (exercice3) {
@@ -81,9 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector("#exercice-3-2 button")
       .addEventListener("click", function () {
-        document
-          .querySelector("#exercice-3-2 button")
-          .classList.toggle("highlight");
+        document.querySelector("#exercice-3-2").classList.toggle("highlight");
       });
 
     document
@@ -103,16 +55,19 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#exercice-3-4").classList.add("highlight");
       });
 
-    document
-      .querySelector("#exercice-3-5")
-      .addEventListener("scroll", function () {
-        document.querySelector("#exercice-3-5").classList.add("highlight");
-      });
+    document.addEventListener("scroll", function () {
+      document.querySelector("#exercice-3-5").classList.add("highlight");
+    });
 
-    document
-      .querySelector("#exercice-3-6")
-      .addEventListener("keydown", function () {
-        document.querySelector("#exercice-3-6").classList.add("highlight");
-      });
+    document.addEventListener("keydown", function () {
+      document.querySelector("#exercice-3-6").classList.add("highlight");
+    });
+    document.addEventListener("keyup", function () {
+      document.querySelector("#exercice-3-6").classList.remove("highlight");
+    });
+
+    window.addEventListener("resize", function () {
+      document.querySelector("#exercice-3-7").classList.add("highlight");
+    });
   }
 });
